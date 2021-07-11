@@ -13,8 +13,8 @@ inline fun <T> Boolean.yes(block: () -> T): BooleanExt<T> {
 
 inline fun <T> Boolean.no(block: () -> T): BooleanExt<T> {
     return when {
-        !this -> WithData(block())
-        else -> Otherwise
+        this -> Otherwise
+        else -> WithData(block())
     }
 }
 
