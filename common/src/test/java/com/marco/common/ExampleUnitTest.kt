@@ -33,4 +33,19 @@ class ExampleUnitTest {
         Assert.assertEquals(ret3, 2)
     }
 
+    @Test
+    fun testProperties() {
+        InfoProps().let {
+            println(it.name)
+            println(it.age)
+            println(it.isStudent)
+            println(it.height)
+
+            it.name = "石头"
+            it.age = 18
+            it.isStudent = true
+            it.height = 165.1
+        }
+    }
+
 }
